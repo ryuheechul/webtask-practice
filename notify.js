@@ -16,8 +16,6 @@ const getTransporter = (ctx) => {
   });
 };
 
-const onlyUser = 'ryuhcii@gmail.com';
-
 const html = `
 <h1>Let\'s preview and plan your productive day!</h1>
 Open your <a href="https://calendar.google.com">Google Calendar</a> to do it!
@@ -26,7 +24,7 @@ Open your <a href="https://calendar.google.com">Google Calendar</a> to do it!
 const getMailOptions = (ctx) => {
   return {
     from: "Robin <" + ctx.secrets.GMAIL_ID + ">",
-    to: onlyUser,
+    to: ctx.meta.THE_USER_EMAIL,
     subject: 'Preview your day!',
     html: html
   }
