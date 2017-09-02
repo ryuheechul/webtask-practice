@@ -8,10 +8,15 @@ const app = express();
 
 const getTransporter = (ctx) => {
   return nodemailer.createTransport({
-    service: 'Gmail',
+    // service: 'Gmail',
+    host: 'smtp.naver.com',
+    port: 587,
+    secure: true,
     auth: {
-      user: ctx.secrets.GMAIL_ID,
-      pass: ctx.secrets.GMAIL_PW
+      // user: ctx.secrets.GMAIL_ID,
+      // pass: ctx.secrets.GMAIL_PW
+      user: ctx.secrets.NAVER_ID,
+      pass: ctx.secrets.NAVER_PW
     }
   });
 };
