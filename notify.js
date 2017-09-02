@@ -28,7 +28,7 @@ Open your <a href="https://calendar.google.com">Google Calendar</a> to do it!
 
 const getMailOptions = (ctx) => {
   return {
-    from: "Robin <" + ctx.secrets.GMAIL_ID + ">",
+    from: "Robin <" + ctx.meta.THE_SENDER_EMAIL + ">",
     to: ctx.meta.THE_USER_EMAIL,
     subject: 'Preview your day!',
     html: html
