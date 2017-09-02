@@ -11,7 +11,7 @@ const getTransporter = (ctx) => {
     // service: 'Gmail',
     host: 'smtp.naver.com',
     port: 587,
-    secure: true,
+    // secure: true,
     auth: {
       // user: ctx.secrets.GMAIL_ID,
       // pass: ctx.secrets.GMAIL_PW
